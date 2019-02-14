@@ -9,5 +9,5 @@ docker push smeler/multi-server:$SHA
 docker push smeler/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=smeler/multi-server:$SHA
-kubectl set image deployments/client-deployment server=smeler/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=smeler/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=smeler/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=smeler/multi-worker:$SHA
